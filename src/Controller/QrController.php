@@ -20,17 +20,6 @@ use Endroid\QrCode\Writer\PngWriter;
 class QrController extends AbstractController
 {
     /**
-     * @Route("/", name="app_qr")
-     */
-    public function index(): Response
-    {
-        return $this->render('qr/index.html.twig', [
-            'controller_name' => 'QrController',
-        ]);
-    }
-
-
-    /**
      * @Route("/generacioqr/{valor}", name="app_qr_generacio", methods={"GET"})
      * Llegeix un valor que se li passa per la url i ho converteix en un QR
      * @param string $valor
